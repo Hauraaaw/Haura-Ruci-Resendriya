@@ -443,29 +443,33 @@ span{
     flex-direction:column;
     gap:1.2rem;
 }
+/* TOMBOL EXPERIENCE YANG SUDAH DIBUAT LEBIH SOFT */
 .exp-btn{
-    background: rgba(25, 25, 25, 0.9);
+    background: rgba(25, 25, 25, 0.6);
+    backdrop-filter: blur(10px);
     color: white;
-    border: 3px solid #ff0080;
+    border: 2px solid rgba(255, 0, 128, 0.3); /* Border lebih tipis dan transparan */
     border-radius: 1.2rem;
     padding: 1.5rem 1.8rem;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 500; /* Font weight dihaluskan sedikit */
     cursor: pointer;
-    box-shadow: 4px 4px 0px #ff0080;
-    transition: 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow halus, bukan shadow blok solid */
+    transition: all 0.3s ease;
     text-align: left;
     width: 100%;
 }
 .exp-btn:hover{
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #ff0080;
+    transform: translateY(-3px); /* Gerakan ke atas lebih halus */
+    border-color: var(--main-color);
+    box-shadow: 0 5px 15px rgba(255, 0, 128, 0.2); /* Efek glow tipis saat dihover */
 }
 .exp-btn.active{
-    background: #ff0080;
-    color: black;
-    box-shadow: 5px 5px 0px white;
-    transform: translate(-2px, -2px);
+    background: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.4); /* Efek glow neon halus saat aktif */
+    transform: translateY(-3px);
 }
 .experience-content{
     flex:1;
@@ -829,6 +833,8 @@ footer ul li{
 
 /* ================= RESPONSIVE DESIGN (ANDROID & MOBILE FRIENDLY) ================= */
 @media(max-width: 1200px) {
+    /* Menambahkan .skills-container ke grid responsif */
+    .skills-container,
     .services-container, 
     .projects-container, 
     .certificates-container { 
@@ -866,6 +872,8 @@ footer ul li{
     .navbar.active{ display: block; }
     .navbar a{ display: block; font-size: 1.8rem; margin: 2.2rem 0; color: white; }
     
+    /* Skills container sekarang otomatis jadi 1 kolom di HP */
+    .skills-container,
     .services-container, 
     .projects-container, 
     .certificates-container { 
