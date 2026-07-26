@@ -121,6 +121,8 @@ if (viewBtn) {
         if (viewBtn.innerText === "View All Certificates") {
             hiddenCards.forEach(card => {
                 card.style.display = "block";
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
                 card.style.animation = "fadeInUp 0.6s ease forwards";
             });
             viewBtn.innerText = "View Less";
@@ -140,9 +142,9 @@ if (viewBtn) {
 // SCROLL REVEAL ANIMATION (Muncul pas di-scroll)
 // ===========================
 window.addEventListener('DOMContentLoaded', () => {
-    const revealElements = document.querySelectorAll('.skill-box, .project-card, .certificate-box, .info-box, .neo-form');
+    // Mengecualikan certificate-box yang memiliki kelas .hidden dari efek opacity 0 awal
+    const revealElements = document.querySelectorAll('.skill-box, .project-card, .certificate-box:not(.hidden), .info-box, .neo-form');
 
-    // Tambahkan class awal untuk efek tersembunyi
     revealElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(40px)';
@@ -163,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', checkReveal);
-    checkReveal(); // Cek pertama kali saat halaman dimuat
+    checkReveal(); 
 });
 
 // ===========================
