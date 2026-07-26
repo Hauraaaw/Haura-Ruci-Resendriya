@@ -109,6 +109,9 @@ filterButtons.forEach(btn => {
     });
 });
 
+// ===========================
+// VIEW ALL CERTIFICATES FUNCTION
+// ===========================
 const viewBtn = document.getElementById("viewMoreBtn");
 
 if (viewBtn) {
@@ -118,6 +121,7 @@ if (viewBtn) {
         if (viewBtn.innerText === "View All Certificates") {
             hiddenCards.forEach(card => {
                 card.style.display = "block";
+                card.style.animation = "fadeInUp 0.6s ease forwards";
             });
             viewBtn.innerText = "View Less";
         } else {
@@ -131,6 +135,36 @@ if (viewBtn) {
         }
     });
 }
+
+// ===========================
+// SCROLL REVEAL ANIMATION (Muncul pas di-scroll)
+// ===========================
+window.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.skill-box, .project-card, .certificate-box, .info-box, .neo-form');
+
+    // Tambahkan class awal untuk efek tersembunyi
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all 0.6s ease-out';
+    });
+
+    const checkReveal = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        revealElements.forEach(el => {
+            const boxTop = el.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', checkReveal);
+    checkReveal(); // Cek pertama kali saat halaman dimuat
+});
 
 // ===========================
 // WHATSAPP CONTACT FORM
