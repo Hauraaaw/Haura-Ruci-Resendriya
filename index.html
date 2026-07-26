@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="floating-grid"></div>
+    </div>
+    
+    <header class="header">
+        <a href="#home" class="logo">Haura <span>Ruci</span></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#services">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>It's <span>Haura</span></h1>
+            <h3 class="text-animation">
+                i'm a <span class="typed-text"></span>
+            </h3>
+            <p>I am a 12th-grade Software Engineering student at SMKN 64 Jakarta, passionate about developing web applications, managing databases, and delivering reliable, user-focused digital solutions.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/hauraruci08/" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.instagram.com/resendryiinv/" target="_blank" rel="noopener"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://github.com/Hauraaaw" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yahauraruci@gmail.com" target="_blank" rel="noopener"><i class='bx bx-envelope'></i></a>    
+                <a href="https://wa.me/6281282346044" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <a href="#about" class="btn">Read More</a>
+        </div>
+
+        <div class="home-img">
+            <img src="img/h1.jpeg" alt="Haura Ruci">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3 class="text-animation">
+                <span class="typed-text"></span>
+            </h3>
+            <p>I have completed more than 10 academic and personal projects, gaining hands-on experience in web application development, database design, and software development. These experiences have strengthened my technical, analytical, and problem-solving skills while helping me understand the software development process. I am also proficient in Microsoft Office for documentation, data management, and presentations. I am committed to continuous learning and eager to apply my knowledge in a professional environment while growing as an IT professional.</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+        <div class="about-img">
+            <img src="img/h2.jpeg" alt="About Haura">
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2 class="heading">My <span>Experience</span></h2>
+        <div class="experience-container">
+            <div class="experience-tabs">
+                <button class="exp-btn active" data-target="education">Education</button>
+                <button class="exp-btn" data-target="projects-tab">School Projects</button>
+                <button class="exp-btn" data-target="learning">Self Learning</button>
+                <button class="exp-btn" data-target="freelance">Freelance</button>
+                <button class="exp-btn" data-target="event-publisher">Event Publisher</button>
+                <button class="exp-btn" data-target="internship">Internship</button>
+            </div>
+
+            <div class="experience-content">
+                <div class="exp-box active" id="education">
+                    <h3>Software Engineering Student</h3>
+                    <span>SMKN 64 Jakarta</span>
+                    <p>Studying software engineering with a focus on web application development, database management, software design, and problem-solving through academic and project-based learning. Experienced in developing web and desktop applications while continuously improving technical and analytical skills.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Flutter</span>
+                        <span>Laravel</span>
+                    </div>
+                </div>
+
+                <div class="exp-box" id="projects-tab">
+                    <h3>School Projects</h3>
+                    <span>2024 - Present</span>
+                    <p>Developed 10+ software projects covering web applications, desktop applications, UI/UX design, and database systems, with a focus on functionality, problem-solving, and real-world use cases.</p>
+                </div>
+
+                <div class="exp-box" id="learning">
+                    <h3>Self Learning</h3>
+                    <span>2024 - 2026</span>
+                    <p>Continuously enhancing technical skills through online courses in software engineering, web development, AI, and data analytics.</p>
+                    <ul>
+                        <li>RevoU Coding Camp</li>
+                        <li>Dibimbing.id</li>
+                        <li>Celerates</li>
+                        <li>Relvia Academy</li>
+                        <li>ASEAN Foundation × Google.org</li>
+                        <li>Maxy Academy</li>
+                    </ul>
+                    <div style="margin-top: 2.5rem;">
+                        <a href="#certificates" class="neo-github-btn">
+                            View Certificates
+                        </a>
+                    </div>
+                </div>
+
+                <div class="exp-box" id="freelance">
+                    <h3>Freelance Digital Project Assistant</h3>
+                    <span>2025 – Present</span>
+                    <ul>
+                        <li>Assisted clients with Microsoft Office documents (Word, Excel, and PowerPoint).</li>
+                        <li>Designed presentations and digital content using Canva.</li>
+                        <li>Supported web and desktop application development projects, including coding, debugging, and testing.</li>
+                        <li>Delivered high-quality work while meeting project deadlines.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-box" id="event-publisher">
+                    <h3>Head of Event Publisher</h3>
+                    <span>2025 – 2026</span>
+                    <ul>
+                        <li>Led and coordinated a team of 20+ members during publisher event operations.</li>
+                        <li>Coordinated publication workflows and ensured tasks were completed on schedule.</li>
+                        <li>Managed publication documentation, payment administration, and operational records with accuracy.</li>
+                        <li>Collaborated with team members to ensure smooth publication processes and efficient event execution.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-box" id="internship">
+                    <h3>Internship</h3>
+                    <span>Coming Soon</span>
+                    <p>This section will be updated after completing my internship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="services-container">
+            
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-code-alt'></i>
+                    <h4>Programming</h4>
+                    <p>HTML, CSS, JavaScript, PHP, Java, C#</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-layer'></i>
+                    <h4>Frameworks</h4>
+                    <p>Laravel, Flutter, Bootstrap</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-data'></i>
+                    <h4>Database</h4>
+                    <p>MySQL, Postman</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-git-branch'></i>
+                    <h4>Version Control</h4>
+                    <p>Git, GitHub</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-wrench'></i>
+                    <h4>Development Tools</h4>
+                    <p>Visual Studio Code, NetBeans, XAMPP, Laragon</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-paint'></i>
+                    <h4>Design Tools</h4>
+                    <p>Figma, Canva</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-bot'></i>
+                    <h4>AI Tools</h4>
+                    <p>Prompt Engineering, AI-Assisted Development, ChatGPT, Gemini AI, Claude, Emergent</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-file'></i>
+                    <h4>Office Applications</h4>
+                    <p>Microsoft Word, Microsoft Excel, PowerPoint</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="website">Website</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+            <button class="filter-btn" data-filter="laravel">Laravel</button>
+            <button class="filter-btn" data-filter="uiux">UI / UX</button>
+            <button class="filter-btn" data-filter="C#">C#</button>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card website uiux">
+                <img src="img/food.png" alt="Online Food Ordering">
+                <div class="project-info">
+                    <h3>Online Food Ordering</h3>
+                    <p>A full-featured food ordering application that includes user authentication, menu browsing, shopping cart, order management, checkout, and MySQL database integration for efficient data storage and transaction processing.</p>
+                    <div class="tech">
+                        <span>PHP</span>
+                        <span>Figma</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Hauraaaw/kedai-hawa-project" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card website laravel">
+                <img src="img/ecom4.png" alt="E-Commerce Website">
+                <div class="project-info">
+                    <h3>E-Commerce Website</h3>
+                    <p>A responsive e-commerce website with product browsing, search and category filtering, shopping cart, user authentication, and checkout features to provide a complete online shopping experience.</p>
+                    <div class="tech">
+                        <span>Laravel</span>
+                        <span>Blade</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Hauraaaw/project-laravel" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card C#">
+                <img src="img/kalk.png" alt="Calculator">
+                <div class="project-info">
+                    <h3>Calculator</h3>
+                    <p>A desktop calculator application built with C# and Windows Forms, providing fast and accurate basic arithmetic operations through a clean and intuitive interface.</p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>Windows Form App</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Hauraaaw/AppCalculatorHaura" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card java">
+                <img src="img/pos.png" alt="POS">
+                <div class="project-info">
+                    <h3>POS & Inventory Management System</h3>
+                    <p>A Java desktop application for managing users, products, inventory, sales transactions, and reports.</p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>Windows Form App</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Hauraaaw/TokoHaura" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card uiux">
+                <img src="img/dt.png" alt="Task Manager App">
+                <div class="project-info">
+                    <h3>Task Manager App</h3>
+                    <p>A task management application that helps users organize daily activities by creating, tracking, filtering, and managing tasks through a simple and intuitive interface.</p>
+                    <div class="tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Hauraaaw/Task-Manager-App" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 5rem;">
+            <a href="https://github.com/Hauraaaw" target="_blank" rel="noopener" class="neo-btn">
+                View All Projects on GitHub <i class='bx bxl-github'></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <h2 class="heading">My <span>Certificates</span></h2>
+
+        <div class="certificates-container">
+            <div class="certificate-box">
+                <img src="img/hawur1.png" alt="Fullstack">
+                <h3>Fullstack Web Architecture & Deployment</h3>
+                <p>Celerates (PT Mitra Talenta Grup)</p>
+            </div>
+
+            <div class="certificate-box">
+                <img src="img/hawur2.png" alt="Data Science Analyst">
+                <h3>Data Science & Predictive Analytics</h3>
+                <p>Dibimbing.id</p>
+            </div>
+
+            <div class="certificate-box">
+                <img src="img/hawur4.png" alt="Software Engineering">
+                <h3>Foundations of Software Engineering</h3>
+                <p>RevoU Coding Camp</p>
+            </div>
+
+            <div class="certificate-box hidden">
+                <img src="img/hawur3.png" alt="Artificial Intelligence">
+                <h3>AI-Powered Web Automation & Development</h3>
+                <p>Relvia Academy</p>
+            </div>
+
+            <div class="certificate-box hidden">
+                <img src="img/ai.png" alt="AI ASEAN">
+                <h3>AI Ready ASEAN Learning Program</h3>
+                <p>ASEAN Foundation × Google.org</p>
+            </div>
+
+            <div class="certificate-box hidden">
+                <img src="img/maxy.jpg" alt="Industry Class">
+                <h3>Industry Class Program in Software Engineering</h3>
+                <p>Maxy Academy</p>
+            </div>
+
+        </div>
+
+        <div class="certificate-btn">
+            <button id="viewMoreBtn" class="btn">
+                View All Certificates
+            </button>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Let's Work<span> Together</span></h2>
+        <p class="contact-desc">I am open to internship opportunities, project collaborations, and professional connections. Feel free to get in touch.</p>
+        
+        <div class="contact-container">
+            <div class="contact-card-info">
+                <div class="info-box">
+                    <i class='bx bx-envelope'></i>
+                    <span>yahauraruci@gmail.com</span>
+                </div>
+                <div class="info-box">
+                    <i class='bx bxl-whatsapp'></i>
+                    <span>+62 812-8234-6044</span>
+                </div>
+                <div class="info-box">
+                    <i class='bx bx-map'></i>
+                    <span>Lubang Buaya, Cipayung, Jakarta Timur</span>
+                </div>
+
+                <div class="contact-social-buttons">
+                    <a href="https://github.com/Hauraaaw" target="_blank" rel="noopener" class="neo-btn">
+                        <i class='bx bxl-github'></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/hauraruci08/" target="_blank" rel="noopener" class="neo-btn">
+                        <i class='bx bxl-linkedin-square'></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <form id="whatsappForm" class="neo-form">
+                <div class="input-box">
+                    <label>Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <label>Subject</label>
+                    <input type="text" id="subject" placeholder="What is this about?" required>
+                </div>
+                <div class="input-box">
+                    <label>Your Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="neo-submit-btn">Send via WhatsApp <i class='bx bxl-whatsapp'></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/hauraruci08/" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.instagram.com/resendryiinv/" target="_blank" rel="noopener"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://github.com/Hauraaaw" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yahauraruci@gmail.com" target="_blank" rel="noopener"><i class='bx bx-envelope'></i></a>
+            <a href="https://wa.me/6281282346044" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+        
+        <p class="copyright">
+            © 2026 | Haura Ruci. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
