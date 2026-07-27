@@ -138,13 +138,15 @@ body{
     display: none;
     cursor: pointer;
 }
+
+/* Perbaikan Jarak Antar Section agar tidak terlalu jauh/kosong */
 section{
-    min-height: 100vh;
-    padding: 10rem 7% 8rem;
+    padding: 8rem 7%;
 }
 
 /* ================= HOME ================= */
 .home{
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -943,7 +945,6 @@ footer ul li{
     .header { padding: 2rem 5%; }
     #menu-icon{ display: block; }
     
-    /* Tampilkan kembali menu Home saat mode mobile/responsive */
     .navbar a.home-nav-item {
         display: block;
     }
