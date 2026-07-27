@@ -437,37 +437,39 @@ span{
 }
 
 /* ================= EXPERIENCE ================= */
-.experience{ 
+.experience { 
     background: transparent; 
     color: white;
 }
-.experience .heading{ 
+.experience .heading { 
     margin-bottom: 4rem; 
 }
 
-.experience-grid-container{
+.experience-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: stretch;
 }
 
-.exp-card-box{
-    background: var(--main-color);
-    border-radius: 2.5rem;
+/* Kotak warna putih, border dan bayangan 3D warna pink */
+.exp-card-box {
+    background: #ffffff;
+    border: 3px solid var(--main-color);
+    border-radius: 2rem;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 25px rgba(255, 0, 128, 0.2);
+    box-shadow: 6px 6px 0px var(--main-color);
+    transition: all 0.2s ease;
 }
 
-.exp-card-box:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(255, 0, 128, 0.4);
+.exp-card-box:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--main-color);
 }
 
-.exp-card-info{
+.exp-card-info {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -477,66 +479,97 @@ span{
     padding: 3rem;
 }
 
+/* Icon box dengan jarak bawah yang longgar ke judul */
 .exp-card-info i.bx {
     font-size: 3.5rem;
     color: white;
-    margin-bottom: 1.2rem;
-    background: rgba(0, 0, 0, 0.15);
+    background: var(--main-color);
     padding: 1.2rem;
-    border-radius: 1.5rem;
-    transition: 0.3s ease;
+    border-radius: 1.2rem;
+    box-shadow: 3px 3px 0px #111;
+    margin-bottom: 2rem; 
+    transition: 0.2s ease;
 }
 
 .exp-card-box:hover .exp-card-info i.bx {
-    background: white;
+    background: #111;
     color: var(--main-color);
-    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 3px 3px 0px var(--main-color);
+    transform: scale(1.05);
 }
 
-.exp-card-info h3{
+.exp-card-info h3 {
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    color: white;
+    color: #111;
 }
 
-.exp-card-info .exp-company{
+.exp-card-info .exp-company {
     font-size: 1.4rem;
-    font-weight: 500;
-    color: #ffe6f2;
+    font-weight: 600;
+    color: var(--main-color);
     margin-bottom: 1.2rem;
     display: block;
 }
 
 .exp-card-info p, 
-.exp-card-info li{
+.exp-card-info li {
     font-size: 1.4rem;
     line-height: 1.6;
-    color: #fff;
+    color: #333333;
 }
 
-.exp-card-info ul{
+.exp-card-info ul {
     margin-left: 1.8rem;
     margin-top: 0.5rem;
 }
 
-.exp-card-box .tech-stack{
+.exp-card-box .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
     margin-top: 1.5rem;
 }
 
-.exp-card-box .tech-stack span{
+.exp-card-box .tech-stack span {
     padding: .5rem 1.2rem;
-    border: 2px solid white;
+    border: 2px solid var(--main-color);
     border-radius: 50px;
     font-size: 1.2rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.1);
+    color: #111;
+    background: rgba(255, 0, 128, 0.08);
+    font-weight: 500;
 }
 
-/* Responsif otomatis untuk HP & Tablet */
+/* ================= EXPERIENCE ACTION BUTTON ================= */
+.exp-action-btn {
+    background: var(--main-color);
+    color: white;
+    border: 3px solid #111;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #111;
+    transition: 0.2s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.exp-action-btn:hover {
+    background: #111;
+    color: var(--main-color);
+    border-color: #111;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--main-color);
+}
+
+/* ================= RESPONSIVE DESIGN (MOBILE & TABLET) ================= */
 @media(max-width: 1200px) {
     .experience-grid-container { 
         grid-template-columns: repeat(2, 1fr); 
