@@ -75,17 +75,17 @@ body{
     width: 200%;
     height: 200%;
     background-image: 
-        linear-gradient(to right, rgba(255, 0, 128, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 0, 128, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
+        linear-gradient(to right, rgba(255, 0, 128, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 0, 128, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
     z-index: -1;
     pointer-events: none;
-    animation: glideGrid 25s linear infinite;
+    animation: glideGrid 8s linear infinite;
 }
 
 @keyframes glideGrid {
     0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    100% { transform: translate(40px, 40px); }
 }
 
 /* ================= HEADER & SECTIONS ================= */
@@ -126,6 +126,12 @@ body{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+
+/* Sembunyikan Home di navbar atas khusus Desktop */
+.navbar a.home-nav-item {
+    display: none;
+}
+
 #menu-icon{
     font-size: 3.4rem;
     color: var(--main-color);
@@ -161,51 +167,44 @@ span{
 .home-content h3{
     margin-bottom: 1.5rem;
     margin-top: 1rem;
-    font-size: 2.8rem;
+    font-size: 3.2rem;
 }
 .home-content h1{
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     font-weight: 700;
     margin-top: 1rem;
     line-height: 1.2;
 }
-.home-img{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about-img{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-.home-img img,
-.about-img img{
-    width: 26vw;
-    max-width: 280px;
+
+.home-img img {
+    width: 34vw;
+    max-width: 360px;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
     animation: floatImage 4s ease-in-out infinite; 
 }
+
 .home-img img:hover,
 .about-img img:hover{
     box-shadow: 0 0 40px var(--main-color),
                 0 0 80px var(--main-color);
 }
+
 @keyframes floatImage {
     0% { transform: translateY(0); }
     50% { transform: translateY(-2rem); }
     100% { transform: translateY(0); }
 }
+
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
     max-width: 85%;
     line-height: 1.6;
 }
+
 .social-icons a{
     display: inline-flex;
     justify-content: center;
@@ -245,7 +244,7 @@ span{
 }
 
 .text-animation{
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 600;
     min-width: 250px;
 }
@@ -281,12 +280,22 @@ span{
     line-height: 1.4;
 }
 .about-content h3{
-    font-size: 2.4rem;
+    font-size: 2.6rem; 
 }
 .about-content p{
-    font-size: 1.5rem;
+    font-size: 1.7rem; 
     margin: 1.8rem 0 2.5rem;
     line-height: 1.7;
+}
+
+.about-img img {
+    width: 34vw;         
+    max-width: 380px;    
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    animation: floatImage 4s ease-in-out infinite; 
 }
 
 ::-webkit-scrollbar{ width: 12px; }
@@ -423,7 +432,6 @@ span{
     display: none;
 }
 
-/* Mengaktifkan sertifikat tersembunyi menggunakan kelas expanded */
 .certificates-container.expanded .certificate-box.hidden {
     display: block !important;
     opacity: 1 !important;
@@ -452,7 +460,6 @@ span{
     align-items: stretch;
 }
 
-/* Kotak warna putih, border dan bayangan 3D warna pink */
 .exp-card-box {
     background: #ffffff;
     border: 3px solid var(--main-color);
@@ -479,7 +486,6 @@ span{
     padding: 3rem;
 }
 
-/* Icon box dengan jarak bawah yang longgar ke judul */
 .exp-card-info i.bx {
     font-size: 3.5rem;
     color: white;
@@ -567,19 +573,6 @@ span{
     border-color: #111;
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px var(--main-color);
-}
-
-/* ================= RESPONSIVE DESIGN (MOBILE & TABLET) ================= */
-@media(max-width: 1200px) {
-    .experience-grid-container { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media(max-width: 895px) {
-    .experience-grid-container { 
-        grid-template-columns: 1fr; 
-    }
 }
 
 /* ================= PROJECTS ================= */
@@ -931,7 +924,8 @@ footer ul li{
     .skills-container,
     .services-container, 
     .projects-container, 
-    .certificates-container { 
+    .certificates-container,
+    .experience-grid-container { 
         grid-template-columns: repeat(2, 1fr); 
     }
 }
@@ -949,6 +943,11 @@ footer ul li{
     .header { padding: 2rem 5%; }
     #menu-icon{ display: block; }
     
+    /* Tampilkan kembali menu Home saat mode mobile/responsive */
+    .navbar a.home-nav-item {
+        display: block;
+    }
+
     .blob-1 { width: 250px; height: 250px; filter: blur(90px); }
     .blob-2 { width: 300px; height: 300px; filter: blur(90px); }
 
@@ -972,7 +971,8 @@ footer ul li{
     .skills-container,
     .services-container, 
     .projects-container, 
-    .certificates-container { 
+    .certificates-container,
+    .experience-grid-container { 
         grid-template-columns: repeat(1, 1fr); 
     }
 
