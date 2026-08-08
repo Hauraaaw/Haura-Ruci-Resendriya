@@ -139,7 +139,6 @@ body{
     cursor: pointer;
 }
 
-/* Perbaikan Jarak Antar Section agar tidak terlalu jauh/kosong */
 section{
     padding: 8rem 7%;
 }
@@ -227,8 +226,20 @@ span{
     box-shadow: 0 0 20px var(--main-color);
     background-color: var(--main-color);
 }
+
+.home-buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
 .btn{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
     padding: 1rem 2.6rem;
     background: var(--main-color);
     border-radius: 4rem;

@@ -74,21 +74,6 @@ typedSpans.forEach(span => {
     type();
 });
 
-const expBtns = document.querySelectorAll(".exp-btn");
-const expBoxes = document.querySelectorAll(".exp-box");
-
-expBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        expBtns.forEach(b => b.classList.remove("active"));
-        expBoxes.forEach(box => box.classList.remove("active"));
-
-        btn.classList.add("active");
-
-        const targetId = btn.getAttribute("data-target");
-        document.getElementById(targetId).classList.add("active");
-    });
-});
-
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
